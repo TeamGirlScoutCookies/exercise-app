@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Measurements</title>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <title>TestApp</title>
     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
-    <div class="container">
-      <div id="header" class="span-24">
-        <p>Enter Your Measurements:</p>
-      </div>
-      <div class="span-24">
-        <%= yield %>
-      </div>
-      <div id="footer" class="span-24">
-        <p>Project by Team Girl Scout Cookies</p>
-      </div>
-    </div>
+    <%= yield %>
   </body>
 </html>
